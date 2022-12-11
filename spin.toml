@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Palash Nigam <npalash25@gmail.com>"]
+description = ""
+name = "advent-challenge-lowercase-svc"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "advent-challenge-lowercase-svc"
+source = "target/wasm32-wasi/release/advent_challenge_lowercase_svc.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
